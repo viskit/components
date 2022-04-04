@@ -51,6 +51,9 @@ export class Accordion extends LitElement {
   @query(".content")
   content: HTMLDivElement;
 
+  @property()
+  test;
+
   #duration: number;
 
   #offset: number = 0;
