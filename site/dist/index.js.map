@@ -1,1 +1,1 @@
-{"mappings":"AAAAA,MAAM","sources":["../site/index.ts"],"sourcesContent":[null],"names":["alert"],"version":3,"file":"index.js.map"}
+{"mappings":"ACAA,KAAK,CAAC,KAAK,CAAC,CAAC","sources":["site/index.ts","../site/index.ts"],"sourcesContent":["alert(\"hi!\");\n",null],"names":[],"version":3,"file":"index.js.map"}
