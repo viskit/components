@@ -1,7 +1,7 @@
-import { Accordion } from "./components/atom/vis-atom-accordion";
-import "./components/atom/vis-atom-accordion";
-import "./components/atom/vis-atom-switcher";
-import { Switcher } from "./components/atom/vis-atom-switcher";
-import "./components/mix/vis-mix-sliding";
-import { Sliding } from "./components/mix/vis-mix-sliding";
+import { Accordion } from "./components/layout/vis-accordion";
+import "./components/layout/vis-accordion";
+import "./components/layout/vis-switcher";
+import { Switcher } from "./components/layout/vis-switcher";
+import "./components/mix/vis-sliding";
+import { Sliding } from "./components/mix/vis-sliding";
 export { Accordion, Switcher, Sliding };

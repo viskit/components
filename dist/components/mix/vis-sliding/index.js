@@ -1,9 +1,9 @@
 var _Sliding_startSwitcherWidth, _Sliding_endSwitcherWidth;
 import { __classPrivateFieldGet, __classPrivateFieldSet, __decorate } from "tslib";
 import { LitElement, html, css } from "lit";
-import "../../atom/vis-atom-accordion";
-import "../../atom/vis-atom-switcher";
-import { customElement, query, } from "lit/decorators.js";
+import "../../layout/vis-accordion";
+import "../../layout/vis-switcher";
+import { customElement, query } from "lit/decorators.js";
 import { repeat } from "lit/directives/repeat.js";
 import fillStyle from "../../../css/fill";
 import { SlideEventDispatcher, } from "../../../lib/SlideEventDispatcher";
@@ -45,15 +45,11 @@ let Sliding = class Sliding extends LitElement {
     }
     render() {
         return html `
-      <vis-atom-accordion>
-        <vis-atom-switcher slot="start">
-          ${this.renderSlotWraps()}
-        </vis-atom-switcher>
+      <vis-accordion>
+        <vis-switcher slot="start"> ${this.renderSlotWraps()} </vis-switcher>
         <slot></slot>
-        <vis-atom-switcher slot="end"
-          >${this.renderSlotWraps(false)}</vis-atom-switcher
-        >
-      </vis-atom-accordion>
+        <vis-switcher slot="end">${this.renderSlotWraps(false)}</vis-switcher>
+      </vis-accordion>
     `;
     }
 };
@@ -67,15 +63,15 @@ Sliding.styles = [
     `,
 ];
 __decorate([
-    query("vis-atom-accordion")
+    query("vis-accordion")
 ], Sliding.prototype, "accordion", void 0);
 __decorate([
-    query("vis-atom-switcher:nth-of-type(1)")
+    query("vis-switcher:nth-of-type(1)")
 ], Sliding.prototype, "startSwitcher", void 0);
 __decorate([
-    query("vis-atom-switcher:nth-of-type(2)")
+    query("vis-switcher:nth-of-type(2)")
 ], Sliding.prototype, "endSwitcher", void 0);
 Sliding = __decorate([
-    customElement("vis-mix-sliding")
+    customElement("vis-sliding")
 ], Sliding);
 export { Sliding };

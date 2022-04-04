@@ -3,7 +3,7 @@ import { customElement, query, state, property } from "lit/decorators.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { classMap } from "lit/directives/class-map.js";
 
-@customElement("vis-layout-accordion")
+@customElement("vis-accordion")
 export class Accordion extends LitElement {
   static styles = css`
     :host {

@@ -1,25 +1,17 @@
 import { LitElement, html, css, CSSResultGroup, PropertyValueMap } from "lit";
-import "../../layout/vis-layout-accordion";
-import "../../layout/vis-layout-switcher";
-import {
-  customElement,
-  query,
-  state,
-  property,
-  queryAll,
-} from "lit/decorators.js";
+import "../../layout/vis-accordion";
+import "../../layout/vis-switcher";
+import { customElement, query } from "lit/decorators.js";
 import { repeat } from "lit/directives/repeat.js";
-import { styleMap } from "lit/directives/style-map.js";
-import { classMap } from "lit/directives/class-map.js";
-import { Accordion } from "../../layout/vis-layout-accordion";
-import { Switcher } from "../../layout/vis-layout-switcher";
+import { Accordion } from "../../layout/vis-accordion";
+import { Switcher } from "../../layout/vis-switcher";
 import fillStyle from "../../../css/fill";
 import {
   SlideEventDispatcher,
   SlideEventInit,
 } from "../../../lib/SlideEventDispatcher";
 
-@customElement("vis-mix-sliding")
+@customElement("vis-sliding")
 export class Sliding extends LitElement {
   static styles = [
     fillStyle,
@@ -31,13 +23,13 @@ export class Sliding extends LitElement {
   ];
   slideEventDispatcher = new SlideEventDispatcher(this);
 
-  @query("vis-layout-accordion")
+  @query("vis-accordion")
   accordion: Accordion;
 
-  @query("vis-layout-switcher:nth-of-type(1)")
+  @query("vis-switcher:nth-of-type(1)")
   startSwitcher: Switcher;
 
-  @query("vis-layout-switcher:nth-of-type(2)")
+  @query("vis-switcher:nth-of-type(2)")
   endSwitcher: Switcher;
 
   renderSlotWraps(start = true) {
@@ -96,15 +88,11 @@ export class Sliding extends LitElement {
 
   render() {
     return html`
-      <vis-layout-accordion>
-        <vis-layout-switcher slot="start">
-          ${this.renderSlotWraps()}
-        </vis-layout-switcher>
+      <vis-accordion>
+        <vis-switcher slot="start"> ${this.renderSlotWraps()} </vis-switcher>
         <slot></slot>
-        <vis-layout-switcher slot="end"
-          >${this.renderSlotWraps(false)}</vis-layout-switcher
-        >
-      </vis-layout-accordion>
+        <vis-switcher slot="end">${this.renderSlotWraps(false)}</vis-switcher>
+      </vis-accordion>
     `;
   }
 }

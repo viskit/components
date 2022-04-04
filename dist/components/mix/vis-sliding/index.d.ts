@@ -1,8 +1,8 @@
 import { LitElement } from "lit";
-import "../../atom/vis-atom-accordion";
-import "../../atom/vis-atom-switcher";
-import { Accordion } from "../../atom/vis-atom-accordion";
-import { Switcher } from "../../atom/vis-atom-switcher";
+import "../../layout/vis-accordion";
+import "../../layout/vis-switcher";
+import { Accordion } from "../../layout/vis-accordion";
+import { Switcher } from "../../layout/vis-switcher";
 import { SlideEventDispatcher } from "../../../lib/SlideEventDispatcher";
 export declare class Sliding extends LitElement {
     #private;

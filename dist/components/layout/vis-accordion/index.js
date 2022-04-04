@@ -120,6 +120,6 @@ __decorate([
     query(".content")
 ], Accordion.prototype, "content", void 0);
 Accordion = __decorate([
-    customElement("vis-atom-accordion")
+    customElement("vis-accordion")
 ], Accordion);
 export { Accordion };

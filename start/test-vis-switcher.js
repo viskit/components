@@ -1,15 +1,15 @@
-import "../src/components/layout/vis-layout-switcher";
+import "../src/components/layout/vis-switcher";
 
 document.body.insertAdjacentHTML(
   "afterbegin",
   `
     <h3> Test vis-switcher component </h3>
     <div style="height:100px">
-    <vis-layout-switcher id="vis-switcher1">
+    <vis-switcher id="vis-switcher1">
         <button class="create"> create </button>
         <button class="edit"> edit </button>
         <button class="delete" > delete </button>
-    </vis-layout-switcher>
+    </vis-switcher>
     </div>
 `
 );

@@ -18,16 +18,17 @@ npm i lit
 
 # Concept
 
-### Atom component
+## Atom component
 
-- vis-atom-button
-- vis-atom-item
+- vis-button
+- vis-item
+- vis-textarea
 
-### Layout component
+## Layout component
 
-- vis-layout-accordion
-- vis-layout-switcher
+- vis-accordion
+- vis-switcher
 
-### Mix component
+## Mix component
 
-- vis-mix-sliding
+- vis-sliding

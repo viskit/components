@@ -1,7 +1,7 @@
-import "../src/components/mix/vis-mix-sliding";
-import { Sliding } from "../src/components/mix/vis-mix-sliding";
+import "../src/components/mix/vis-sliding";
+import { Sliding } from "../src/components/mix/vis-sliding";
 import {
-  SlideEventDispatcher,
+  SlideEventDispatcher, 
   SlideEventInit,
 } from "../src/lib/SlideEventDispatcher";
 document.body.insertAdjacentHTML(
@@ -9,7 +9,7 @@ document.body.insertAdjacentHTML(
   `
     <h3> Test vis-sliding component </h3>
     <div style="height:100px">
-    <vis-mix-sliding  id="vis-sliding1"> 
+    <vis-sliding  id="vis-sliding1"> 
       <div style="height:100px" >hello sliding me </div>
         <button  slot="start0"> AAA </button>
         <button  slot="start1"> BBB </button>
@@ -18,7 +18,7 @@ document.body.insertAdjacentHTML(
         <button class="create" slot="end0"> create </button>
         <button class="edit" slot="end1"> edit </button>
         <button class="delete" slot="end2"> delete </button>
-    </vis-mix-sliding>
+    </vis-sliding>
     </div>
 `
 );

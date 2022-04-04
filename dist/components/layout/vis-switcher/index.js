@@ -2,7 +2,7 @@ var _Switcher_switchedEl, _Switcher_switchedIndex;
 import { __classPrivateFieldGet, __classPrivateFieldSet, __decorate } from "tslib";
 import { html, css, LitElement } from "lit";
 import { customElement, query } from "lit/decorators.js";
-import renderSwitcher, { onlyStyle, fillStyle, } from "../../../templates/vis-switcher";
+import renderSwitcher, { onlyStyle, fillStyle, } from "../../../templates/switcher";
 let Switcher = class Switcher extends LitElement {
     constructor() {
         super(...arguments);
@@ -62,6 +62,6 @@ __decorate([
     query(".wrap")
 ], Switcher.prototype, "wrap", void 0);
 Switcher = __decorate([
-    customElement("vis-atom-switcher")
+    customElement("vis-switcher")
 ], Switcher);
 export { Switcher };

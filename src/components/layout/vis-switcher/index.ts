@@ -3,9 +3,9 @@ import { customElement, query } from "lit/decorators.js";
 import renderSwitcher, {
   onlyStyle,
   fillStyle,
-} from "../../../templates/vis-switcher";
+} from "../../../templates/switcher";
 
-@customElement("vis-layout-switcher")
+@customElement("vis-switcher")
 export class Switcher extends LitElement {
   static styles = [
     fillStyle,

@@ -1,10 +1,10 @@
-import { Accordion } from "./components/layout/vis-layout-accordion";
-import "./components/layout/vis-layout-accordion";
+import { Accordion } from "./components/layout/vis-accordion";
+import "./components/layout/vis-accordion";
 
-import "./components/layout/vis-layout-switcher";
-import { Switcher } from "./components/layout/vis-layout-switcher";
+import "./components/layout/vis-switcher";
+import { Switcher } from "./components/layout/vis-switcher";
 
-import "./components/mix/vis-mix-sliding";
-import { Sliding } from "./components/mix/vis-mix-sliding";
+import "./components/mix/vis-sliding";
+import { Sliding } from "./components/mix/vis-sliding";
 
 export { Accordion, Switcher, Sliding };

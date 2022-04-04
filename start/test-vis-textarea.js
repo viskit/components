@@ -1,42 +1,27 @@
-import "../src/components/vis-textarea";
-import { Camera, CameraResultType, CameraSource } from "@capacitor/camera";
+import "../src/components/atom/vis-textarea";
+import { html, render } from "lit";
 
-import url from "./love.jpg";
-document.body.insertAdjacentHTML(
-  "afterbegin",
-  `
-    <h3> Test vis-textarea component : </h3>
-    <button id="vis-textarea-test-button"> text2html </button>
-    <button id="vis-textarea-test-button2"> add image </button>
-    <button id="vis-textarea-test-button3"> get value </button>
-    <vis-textarea></vis-textarea>
-    
-`
+render(
+  html`
+    <div>
+      <h3>Test vis-textarea component</h3>
+      <vis-textarea
+        @vis-change=${(e) => console.log(e.detail.editor.innerText)}
+        .value=${html` <h5>Hello world</h5> `}
+      ></vis-textarea>
+    </div>
+  `,
+  document.body
 );
 
 const textarea = document.querySelector("vis-textarea");
 
-const btn = document.querySelector("#vis-textarea-test-button");
-const btn2 = document.querySelector("#vis-textarea-test-button2");
-const btn3 = document.querySelector("#vis-textarea-test-button3");
-let num = 0;
-btn.onclick = () => {
-  textarea.value = "hello ...";
-  textarea.requestUpdate("value");
-};
+(async () => {
+  console.log(await textarea.editor);
+})();
 
-btn2.onclick = async () => {
-  const image = await Camera.getPhoto({
-    quality: 90,
-    allowEditing: true,
-    source: CameraSource.Camera,
-    resultType: CameraResultType.DataUrl,
-  });
-  var imageUrl = image.dataUrl;
-  textarea.insertImage(imageUrl);
-};
-
-btn3.onclick = async () => {
-  console.log(333);
-  console.log(textarea.getValue());
-};
+setTimeout(async () => {
+  textarea.value = "1212121";
+  await textarea.updateComplete;
+  console.log(await textarea.editor);
+}, 3000);
