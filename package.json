@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "parcel start/index.html --dist-dir start/dist --open --no-cache",
-    "build:site": "cd site && parcel build index.ts --dist-dir dist"
+    "build:site": "parcel build site/index.ts"
   },
   "repository": {
     "type": "git",
